@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 – Page Not Found | Alpaca Farm</title>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/><link rel="stylesheet" href="../assets/css/dark-mode.css"/><link rel="stylesheet" href="../assets/css/rtl.css"/>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+  <style>
+    html,body{height:100%}
+    .error-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;}
+    .error-img-side{position:relative;overflow:hidden;}
+    .error-img-side img{width:100%;height:100%;object-fit:cover;}
+    .error-img-side::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--bg-primary) 100%);}
+    .error-content-side{display:flex;align-items:center;justify-content:center;padding:var(--space-8) var(--space-6);background:var(--bg-primary);}
+    .error-inner{max-width:480px;}
+    .error-code-text{font-family:var(--font-heading);font-size:clamp(6rem,15vw,10rem);font-weight:800;line-height:1;background:linear-gradient(135deg,var(--color-primary),var(--color-soft));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .quick-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--space-4);}
+    .quick-links a{background:var(--bg-secondary);border:1px solid var(--border-color);color:var(--text-secondary);padding:8px 18px;border-radius:var(--border-radius-pill);font-size:0.85rem;font-weight:600;transition:var(--transition);}
+    .quick-links a:hover{background:var(--color-primary);color:white;border-color:var(--color-primary);}
+    .alpaca-bounce{font-size:4rem;display:inline-block;animation:graze 3s ease-in-out infinite;}
+    @keyframes graze{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+    @media(max-width:768px){.error-wrap{grid-template-columns:1fr;}.error-img-side{height:260px;}.error-img-side::after{background:linear-gradient(to top,var(--bg-primary) 0%,transparent 60%);}.error-content-side{padding:var(--space-5) var(--space-3);}}
+  </style>
+</head>
+<body>
+
+<div class="auth-page-controls">
+  <button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button>
+  <button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button>
+</div>
+
+<main class="error-wrap" role="main">
+  <!-- Farm image side -->
+  <div class="error-img-side" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt=""/>
+  </div>
+
+  <!-- Error content side -->
+  <div class="error-content-side">
+    <div class="error-inner">
+      <div class="alpaca-bounce" aria-hidden="true">🦙</div>
+      <div class="error-code-text" aria-label="Error 404">404</div>
+      <h2 style="margin-bottom:var(--space-2)">Oops! This Pasture<br>Doesn't Exist</h2>
+      <p style="margin-bottom:var(--space-4)">It looks like this alpaca wandered off somewhere we can't find. The page you're looking for has been moved or doesn't exist.</p>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;">
+        <a href="../index.html" class="btn btn-primary btn-lg"><i class="ri-home-3-line"></i> Back to Farm</a>
+        <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+      </div>
+      <nav class="quick-links" aria-label="Quick navigation">
+        <a href="services.html">Farm Tours</a>
+        <a href="services.html#workshops">Workshops</a>
+        <a href="services.html#adoption">Adoption</a>
+        <a href="blog.html">Journal</a>
+        <a href="services.html#shop">Shop</a>
+      </nav>
+    </div>
+  </div>
+</main>
+
+<script src="../assets/js/main.js"></script>
+</body></html>

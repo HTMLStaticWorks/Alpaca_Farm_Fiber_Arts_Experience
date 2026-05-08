@@ -1,0 +1,20 @@
+/* ========================================
+   ALPACA FARM — RTL STYLES
+   ======================================== */
+[dir="rtl"] { direction: rtl; text-align: right; }
+[dir="rtl"] .logo-text { text-align: right; }
+[dir="rtl"] .about-content .section-label::after { display: none; }
+[dir="rtl"] .about-badge-float { right: auto; left: -20px; }
+[dir="rtl"] .timeline::before { left: auto; right: 36px; }
+[dir="rtl"] .timeline-content { text-align: right; }
+[dir="rtl"] .feature-item { text-align: right; }
+[dir="rtl"] .auth-page-controls { right: auto; left: var(--space-3); }
+[dir="rtl"] .mobile-nav .nav-link { text-align: right; }
+[dir="rtl"] .offering-badge { left: auto; right: 14px; }
+[dir="rtl"] .product-wishlist { right: auto; left: 12px; }
+[dir="rtl"] .alpaca-card.available::before,
+[dir="rtl"] .alpaca-card.adopted::before { right: auto; left: 16px; }
+
+@media(max-width:640px){
+  [dir="rtl"] .timeline::before { left: auto; right: 18px; }
+}

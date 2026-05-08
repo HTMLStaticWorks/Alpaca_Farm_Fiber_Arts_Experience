@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visit Us & Contact | Alpaca Farm</title>
+  <meta name="description" content="Plan your visit to our Vermont alpaca farm. Book tours, workshops, or get in touch with our friendly team. Located at 456 Meadow Lane, Burlington VT."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/><link rel="stylesheet" href="../assets/css/dark-mode.css"/><link rel="stylesheet" href="../assets/css/rtl.css"/>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+  <style>
+    .tabs{display:flex;gap:4px;background:var(--bg-secondary);padding:4px;border-radius:var(--border-radius);margin-bottom:var(--space-4);}
+    .tab-btn{flex:1;padding:10px;border:none;background:transparent;font-family:var(--font-accent);font-size:0.875rem;font-weight:600;color:var(--text-secondary);border-radius:8px;cursor:pointer;transition:var(--transition);}
+    .tab-btn.active{background:var(--bg-card);color:var(--color-primary);box-shadow:var(--shadow-sm);}
+    .tab-panel{display:none;} .tab-panel.active{display:block;}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:var(--space-6);}
+    .contact-info-card{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-4);display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;transition:var(--transition);}
+    .contact-info-card:hover{box-shadow:var(--shadow-md);border-color:var(--color-soft);}
+    .contact-info-card .icon{width:52px;height:52px;background:rgba(58,90,64,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--color-primary);margin-bottom:4px;}
+    .faq-item{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:8px;transition:var(--transition);}
+    .faq-question{display:flex;align-items:center;justify-content:space-between;padding:var(--space-3);cursor:pointer;font-weight:600;font-family:var(--font-heading);font-size:1rem;}
+    .faq-question i{color:var(--color-accent);transition:var(--transition);flex-shrink:0;}
+    .faq-answer{padding:0 var(--space-3) var(--space-3);color:var(--text-secondary);font-size:0.9rem;line-height:1.7;display:none;}
+    .faq-item.open .faq-answer{display:block;}
+    .faq-item.open .faq-question i{transform:rotate(45deg);}
+    @media(max-width:1024px){.contact-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<header id="header" role="banner"><div class="container"><div class="header-inner">
+  <a href="../index.html" class="header-logo"><div class="logo-icon"><i class="ri-leaf-line"></i></div><div class="logo-text"><span class="brand-name">Alpaca Farm</span></div></a>
+  <nav class="header-nav" role="navigation" aria-label="Main navigation">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="home2.html" class="nav-link">Home 2</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Experiences</a>
+    <a href="blog.html" class="nav-link">Journal</a>
+    <a href="contact.html" class="nav-link active">Visit Us</a>
+  </nav>
+  <div class="header-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm">Sign In</a></div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</div></div></header>
+<div class="mobile-nav" id="mobile-nav" role="navigation">
+  <a href="../index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Experiences</a>
+  <a href="blog.html" class="nav-link">Journal</a>
+  <a href="contact.html" class="nav-link active">Visit Us</a>
+  <div class="mobile-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm" style="width:100%; margin-top:10px;">Sign In</a></div>
+</div>
+
+<main class="page-content">
+  <!-- PAGE HERO with image -->
+  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1400&q=80')">
+    <div class="container">
+      <span class="section-label" style="color:var(--color-gold);justify-content:center;margin-bottom:var(--space-2)">We'd Love to See You</span>
+      <h1>Visit the Farm</h1>
+      <p>Book a tour, register for a workshop, or just say hello. We respond within 24 hours.</p>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><i class="ri-arrow-right-s-line"></i><span>Visit Us</span></nav>
+    </div>
+  </section>
+
+  <!-- CONTACT MAIN -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- LEFT: Info + Map -->
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+          <div class="contact-info-card animate-on-scroll">
+            <div class="icon"><i class="ri-map-pin-2-line"></i></div>
+            <h4>Find Us</h4>
+            <p style="font-size:0.875rem;margin:0">456 Meadow Lane<br/>Burlington, VT 05401</p>
+          </div>
+          <div class="contact-info-card animate-on-scroll animate-delay-1">
+            <div class="icon"><i class="ri-phone-line"></i></div>
+            <h4>Call or Text</h4>
+            <p style="font-size:0.875rem;margin:0">Mon–Fri 9am–5pm EST</p>
+            <a href="tel:+18002572221" style="color:var(--color-accent);font-weight:700;margin-top:4px">+1 (800) 257-2221</a>
+          </div>
+          <div class="contact-info-card animate-on-scroll animate-delay-2">
+            <div class="icon"><i class="ri-mail-line"></i></div>
+            <h4>Email Us</h4>
+            <p style="font-size:0.875rem;margin:0">We reply within 24 hours</p>
+            <a href="mailto:hello@alpacafarm.com" style="color:var(--color-accent);font-weight:700;margin-top:4px">hello@alpacafarm.com</a>
+          </div>
+          <div class="contact-info-card animate-on-scroll animate-delay-3">
+            <div class="icon"><i class="ri-time-line"></i></div>
+            <h4>Farm Hours</h4>
+            <p style="font-size:0.875rem;margin:0">May – October: Daily 9am–5pm<br/>November – April: By appointment only</p>
+          </div>
+
+          <!-- Farm image -->
+          <div style="border-radius:var(--border-radius-lg);overflow:hidden;height:200px;" class="animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Aerial view of our Vermont alpaca farm" loading="lazy" style="width:100%;height:100%;object-fit:cover"/>
+          </div>
+
+          <!-- Google Maps placeholder -->
+          <div style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--border-radius-lg);height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--text-light);" class="animate-on-scroll" role="region" aria-label="Map placeholder">
+            <i class="ri-map-2-line" style="font-size:2.5rem;color:var(--color-primary);opacity:0.5"></i>
+            <p style="font-weight:600;font-size:0.9rem;margin:0">Google Maps</p>
+            <p style="font-size:0.75rem;max-width:200px;text-align:center;margin:0">Replace with your Google Maps embed iframe</p>
+          </div>
+
+          <!-- Social -->
+          <div class="contact-info-card animate-on-scroll">
+            <h4 style="margin-bottom:var(--space-2)">Follow Our Farm Life</h4>
+            <div style="display:flex;gap:8px;justify-content:center">
+              <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+              <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Tabbed Forms -->
+        <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--border-radius-xl);padding:var(--space-5);" class="animate-on-scroll animate-delay-2">
+          <div class="tabs" role="tablist">
+            <button class="tab-btn active" role="tab" data-tab="message">Send Message</button>
+            <button class="tab-btn" role="tab" data-tab="booking">Book a Tour</button>
+            <button class="tab-btn" role="tab" data-tab="workshop">Workshop Sign-Up</button>
+          </div>
+
+          <!-- Message Tab -->
+          <div class="tab-panel active" id="tab-message" role="tabpanel">
+            <h3 style="margin-bottom:var(--space-3)">Get in Touch</h3>
+            <!-- Formspree: add action="https://formspree.io/f/YOUR_ID" method="POST" -->
+            <form id="contact-form" data-validate novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)">
+                <div class="form-group">
+                  <label for="c-fname">First Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="c-fname" class="form-control" placeholder="Jane" data-rules="required" required/>
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="c-lname">Last Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="c-lname" class="form-control" placeholder="Smith" data-rules="required" required/>
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email Address <span style="color:#e74c3c">*</span></label>
+                <input type="email" id="c-email" class="form-control" placeholder="jane@example.com" data-rules="required,email" required/>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Phone (optional)</label>
+                <input type="tel" id="c-phone" class="form-control" placeholder="+1 (555) 000-0000"/>
+              </div>
+              <div class="form-group">
+                <label for="c-topic">Enquiry Topic</label>
+                <select id="c-topic" class="form-control">
+                  <option>Farm Tours</option>
+                  <option>Workshops & Classes</option>
+                  <option>Alpaca Adoption</option>
+                  <option>Shop & Products</option>
+                  <option>School / Group Visit</option>
+                  <option>General Question</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-msg">Message <span style="color:#e74c3c">*</span></label>
+                <textarea id="c-msg" class="form-control" placeholder="Tell us how we can help..." data-rules="required" required></textarea>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label>Attach Photos (optional)</label>
+                <div class="file-upload" role="button" tabindex="0">
+                  <i class="ri-upload-cloud-2-line" style="font-size:1.8rem;color:var(--color-primary);display:block;margin-bottom:6px;opacity:0.6"></i>
+                  <p class="file-label" style="margin:0;font-weight:600;font-size:0.875rem">Drop files here or click to browse</p>
+                  <p style="font-size:0.75rem;color:var(--text-light);margin:4px 0 0">JPG, PNG, PDF — max 10MB</p>
+                  <input type="file" style="display:none" accept="image/*,.pdf" multiple aria-hidden="true"/>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full"><i class="ri-send-plane-2-line"></i> Send Message</button>
+            </form>
+          </div>
+
+          <!-- Booking Tab -->
+          <div class="tab-panel" id="tab-booking" role="tabpanel">
+            <h3 style="margin-bottom:8px">Book a Farm Tour</h3>
+            <p style="font-size:0.875rem;margin-bottom:var(--space-3)">Reserve your spot for a guided tour of our Vermont alpaca farm. Groups of 10+ receive 10% off.</p>
+            <!-- Calendar booking integration placeholder -->
+            <div style="background:var(--bg-secondary);border:2px dashed var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-4);text-align:center;margin-bottom:var(--space-3)">
+              <i class="ri-calendar-schedule-line" style="font-size:2.5rem;color:var(--color-primary);opacity:0.5;display:block;margin-bottom:8px"></i>
+              <p style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Calendar Booking Widget</p>
+              <p style="font-size:0.8rem;color:var(--text-light)">Connect Calendly, Cal.com or your booking system here</p>
+            </div>
+            <form id="booking-form" data-validate novalidate>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)">
+                <div class="form-group">
+                  <label for="b-name">Full Name <span style="color:#e74c3c">*</span></label>
+                  <input type="text" id="b-name" class="form-control" placeholder="Jane Smith" data-rules="required" required/>
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="b-email">Email <span style="color:#e74c3c">*</span></label>
+                  <input type="email" id="b-email" class="form-control" placeholder="jane@email.com" data-rules="required,email" required/>
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2)">
+                <div class="form-group">
+                  <label for="b-date">Preferred Date</label>
+                  <input type="date" id="b-date" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label for="b-guests">Number of Guests</label>
+                  <select id="b-guests" class="form-control">
+                    <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5–8</option><option>9–15</option><option>15+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="b-type">Tour Type</label>
+                <select id="b-type" class="form-control">
+                  <option>Standard Tour ($25/person)</option>
+                  <option>Premium Tour + Feeding ($45/person)</option>
+                  <option>Private Group Tour ($120 flat)</option>
+                  <option>Kids Discovery Tour ($15/child)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-notes">Special Requests</label>
+                <textarea id="b-notes" class="form-control" placeholder="Accessibility needs, dietary requirements, etc." style="min-height:80px"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full"><i class="ri-calendar-check-line"></i> Confirm Booking</button>
+            </form>
+          </div>
+
+          <!-- Workshop Tab -->
+          <div class="tab-panel" id="tab-workshop" role="tabpanel">
+            <h3 style="margin-bottom:8px">Workshop Registration</h3>
+            <p style="font-size:0.875rem;margin-bottom:var(--space-3)">Sign up for a fiber arts workshop. All skill levels welcome — materials included.</p>
+            <form data-validate novalidate>
+              <div class="form-group">
+                <label for="w-name">Full Name <span style="color:#e74c3c">*</span></label>
+                <input type="text" id="w-name" class="form-control" placeholder="Your name" data-rules="required" required/>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="w-email">Email <span style="color:#e74c3c">*</span></label>
+                <input type="email" id="w-email" class="form-control" placeholder="your@email.com" data-rules="required,email" required/>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="w-workshop">Choose Workshop <span style="color:#e74c3c">*</span></label>
+                <select id="w-workshop" class="form-control" data-rules="required">
+                  <option value="">Select a workshop...</option>
+                  <option>Intro to Hand Spinning – $85</option>
+                  <option>Rigid Heddle Weaving – $95</option>
+                  <option>Wet Felting Workshop – $65</option>
+                  <option>Natural Dyeing – $75</option>
+                  <option>Advanced Spinning – $110</option>
+                </select>
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="w-level">Experience Level</label>
+                <select id="w-level" class="form-control">
+                  <option>Complete Beginner</option>
+                  <option>Some Experience</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="w-guests">Number of Participants</label>
+                <select id="w-guests" class="form-control">
+                  <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="w-notes">Any Questions or Notes?</label>
+                <textarea id="w-notes" class="form-control" placeholder="Questions, accessibility needs, etc." style="min-height:80px"></textarea>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="w-terms" required/>
+                <label for="w-terms">I understand workshops require a <a href="#">48-hour cancellation</a> notice for a full refund.</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" style="margin-top:var(--space-2)"><i class="ri-scissors-cut-line"></i> Register for Workshop</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section bg-secondary" aria-labelledby="faq-heading">
+    <div class="container container-sm">
+      <div class="section-header animate-on-scroll">
+        <div class="section-label">Quick Answers</div>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <div class="wool-divider"><span class="wool-icon">❓</span></div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="faq-item open">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What should I wear to the farm? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">Comfortable, closed-toe shoes are essential — boots are ideal. Our pastures can be muddy after rain. Dress in layers as Vermont weather changes quickly, especially in spring and fall.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Is the farm accessible for wheelchairs or mobility aids? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">We have paved pathways around our main barn area and one accessible pasture viewing area. Please contact us in advance and we'll ensure your visit is comfortable and enjoyable.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can I bring my dog to the farm? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">We love dogs, but for the safety of our alpacas we ask that pets remain in vehicles. Service animals are welcome — please let us know when booking.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do I need any experience for the fiber arts workshops? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">Absolutely not! Our beginner workshops are designed for complete first-timers. Sophie is a patient and encouraging teacher. You'll leave with a finished piece regardless of your starting point.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What's your cancellation policy? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">Tours: full refund with 24 hours notice. Workshops: full refund with 48 hours notice. We also offer rain credits for weather-related cancellations on tours, usable within 12 months.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do you offer private events or corporate team days? <i class="ri-add-line"></i></div>
+          <div class="faq-answer">Yes! We love hosting private events — from birthday parties to corporate wellness days. Contact us to discuss a bespoke package for your group of up to 40 people.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT IMAGE BANNER -->
+  <section style="position:relative;height:320px;overflow:hidden;" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(44,62,45,0.75),rgba(44,62,45,0.4));display:flex;align-items:center;justify-content:center;text-align:center;">
+      <div>
+        <h2 style="color:white;margin-bottom:var(--space-2)">We Can't Wait to Welcome You</h2>
+        <p style="color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto var(--space-4)">Every visit to the farm is a memory that lasts forever. Book your experience today.</p>
+        <a href="#tab-booking" onclick="document.querySelector('[data-tab=booking]').click();window.scrollTo({top:document.querySelector('.contact-grid').offsetTop-100,behavior:'smooth'});return false;" class="btn btn-primary btn-lg"><i class="ri-calendar-line"></i> Book Now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="ri-leaf-line"></i></div>
+          <span class="brand-name">Alpaca Farm</span>
+        </div>
+        <p>A family-run alpaca farm in the heart of Vermont. Tours, workshops, fiber arts, adoption program and an online shop full of alpaca love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Experiences</h4>
+        <nav class="footer-links">
+          <a href="services.html#tours"><i class="ri-arrow-right-s-line"></i> Farm Tours</a>
+          <a href="services.html#workshops"><i class="ri-arrow-right-s-line"></i> Workshops</a>
+          <a href="services.html#adoption"><i class="ri-arrow-right-s-line"></i> Adoption</a>
+          <a href="services.html#shop"><i class="ri-arrow-right-s-line"></i> Farm Shop</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links">
+          <a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line"></i> Farm Journal</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line"></i> Visit Us</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line"></i> Coming Soon</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Visit the Farm</h4>
+        <div class="footer-links">
+          <a href="tel:+18002572221"><i class="ri-phone-line"></i> +1 (800) 257-2221</a>
+          <a href="mailto:hello@alpacafarm.com"><i class="ri-mail-line"></i> hello@alpacafarm.com</a>
+          <a href="#"><i class="ri-map-pin-line"></i> 456 Meadow Lane, Burlington VT</a>
+          <a href="#"><i class="ri-time-line"></i> Daily 9am–5pm · May–Oct</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Alpaca Farm. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="../sitemap.xml">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false');});
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      this.classList.add('active');
+      const panel=document.getElementById('tab-'+this.dataset.tab);
+      if(panel)panel.classList.add('active');
+    });
+  });
+</script>
+</body></html>

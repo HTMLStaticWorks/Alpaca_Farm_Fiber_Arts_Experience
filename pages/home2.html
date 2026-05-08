@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alpaca Farm | Farm Life & Experiences</title>
+  <meta name="description" content="Discover alpaca tours, fiber workshops, fleece adoption and handmade goods at Vermont's most loved alpaca farm."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/><link rel="stylesheet" href="../assets/css/dark-mode.css"/><link rel="stylesheet" href="../assets/css/rtl.css"/>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+  <style>
+    .hero2{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:var(--header-height);}
+    .hero2-left{position:relative;z-index:2;max-width:820px;padding:var(--space-8) var(--space-3);text-align:center;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+    .hero2-right{position:absolute;inset:0;z-index:0;}
+    .hero2-right img{width:100%;height:100%;object-fit:cover;display:block;}
+    .hero2-right::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(44,62,45,0.82) 0%, rgba(44,62,45,0.55) 55%, rgba(44,62,45,0.35) 100%);}
+    .hero2-content{max-width:820px;}
+    .hero2-content .hero-badge{background:rgba(245,236,215,0.18);border:1px solid rgba(245,236,215,0.35);color:var(--color-secondary);}
+    .hero2-content h1{color:white;}
+    .hero2-content h1 em{color:var(--color-gold);font-style:italic;}
+    .hero2-content p.lead{color:rgba(255,255,255,0.82);}
+    .feature-pills{display:flex;flex-wrap:wrap;gap:8px;margin:var(--space-3) 0;justify-content:center;}
+    .pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);padding:6px 16px;border-radius:var(--border-radius-pill);font-size:0.82rem;font-weight:600;}
+    .pill i{color:var(--color-gold);}
+    .dark-features{background:var(--bg-secondary);padding:var(--space-10) 0;}
+    .dark-features .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3);}
+    .dark-feat-box{background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-4);text-align:center;transition:var(--transition);display:flex;flex-direction:column;height:100%;}
+    .dark-feat-box .feat-img {height:160px;border-radius:var(--border-radius-lg);overflow:hidden;margin-bottom:var(--space-3);}
+    .dark-feat-box .feat-img img {width:100%;height:100%;object-fit:cover;}
+    .dark-feat-box:hover{border-color:var(--color-primary);transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .dark-feat-box i{font-size:1.8rem;color:var(--color-gold);display:block;margin-bottom:var(--space-1);}
+    .dark-feat-box h4{color:var(--text-primary);margin-bottom:8px;}
+    .dark-feat-box p{color:var(--text-secondary);font-size:0.875rem;line-height:1.6;}
+    .seasonal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
+    .season-card{border-radius:var(--border-radius-xl);overflow:hidden;position:relative;aspect-ratio: 16 / 9;cursor:pointer;}
+    .season-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+    .season-card:hover img{transform:scale(1.06);}
+    .season-card-overlay{position:absolute;inset:0;background:rgba(44, 62, 45, 0.45);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:var(--space-6) var(--space-4);transition: var(--transition);}
+    .season-card:hover .season-card-overlay{background:rgba(44, 62, 45, 0.6);}
+    .season-card-overlay h3{color:white;margin-bottom:12px;font-size:1.75rem;text-shadow: 0 2px 10px rgba(0,0,0,0.3);}
+    .season-card-overlay p{color:rgba(255,255,255,0.95);font-size:1rem;margin-bottom:var(--space-4);max-width:320px;line-height:1.5;text-shadow: 0 1px 5px rgba(0,0,0,0.5);}
+    .season-card-overlay .btn{transform: translateY(10px);opacity: 0.9;}
+    .season-card:hover .season-card-overlay .btn{transform: translateY(0);opacity: 1;}
+    @media(max-width:1024px){
+      .hero2-right::after{background:linear-gradient(135deg, rgba(44,62,45,0.82) 0%, rgba(44,62,45,0.55) 55%, rgba(44,62,45,0.35) 100%);}
+      .hero2-left{padding:var(--space-6) var(--space-3);}
+      .dark-features .feat-grid{grid-template-columns:repeat(2,1fr);}
+      .seasonal-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-4);}
+      .season-card{aspect-ratio: 4 / 3;}
+    }
+    @media(max-width:768px){
+      .seasonal-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:640px){
+      .dark-features .feat-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:360px){
+      .seasonal-grid{gap:var(--space-2);}
+      .season-card{aspect-ratio:auto;min-height:300px;}
+      .season-card-overlay{padding:var(--space-3);}
+      .season-card-overlay h3{font-size:1.35rem;margin-bottom:6px;}
+      .season-card-overlay p{font-size:0.875rem;margin-bottom:var(--space-2);max-width:100%;}
+      .season-card-overlay .btn{padding: 10px 20px !important; min-height: 44px !important; font-size: 0.8rem !important;}
+    }
+  </style>
+</head>
+<body class="center-content-page">
+<header id="header" role="banner"><div class="container"><div class="header-inner">
+  <a href="../index.html" class="header-logo"><div class="logo-icon"><i class="ri-leaf-line"></i></div><div class="logo-text"><span class="brand-name">Alpaca Farm</span></div></a>
+  <nav class="header-nav" role="navigation" aria-label="Main navigation">
+    <a href="../index.html" class="nav-link">Home</a>
+    <a href="home2.html" class="nav-link active">Home 2</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="services.html" class="nav-link">Experiences</a>
+    <a href="blog.html" class="nav-link">Journal</a>
+    <a href="contact.html" class="nav-link">Visit Us</a>
+  </nav>
+  <div class="header-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm">Sign In</a></div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</div></div></header>
+<div class="mobile-nav" id="mobile-nav" role="navigation">
+  <a href="../index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link active">Home 2</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Experiences</a>
+  <a href="blog.html" class="nav-link">Journal</a>
+  <a href="contact.html" class="nav-link">Visit Us</a>
+  <div class="mobile-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm" style="width:100%; margin-top:10px;">Sign In</a></div>
+</div>
+
+<main>
+  <!-- Split Hero -->
+  <section class="hero2" aria-label="Hero">
+    <div class="hero2-left">
+      <div class="hero2-content animate-on-scroll">
+        <div class="hero-badge">
+          <i class="ri-star-fill" style="color:var(--color-gold)"></i> Vermont's #1 Farm Experience
+        </div>
+        <h1 style="margin-bottom:var(--space-3)">Live the <em>Fiber Arts</em> Dream</h1>
+        <p class="lead" style="margin-bottom:var(--space-4)">From fleece to finished yarn — our farm invites you to slow down, create with your hands, and fall in love with alpacas.</p>
+        <div class="feature-pills">
+          <span class="pill"><i class="ri-footprint-line"></i> Farm Tours</span>
+          <span class="pill"><i class="ri-scissors-cut-line"></i> Workshops</span>
+          <span class="pill"><i class="ri-heart-3-line"></i> Adoption</span>
+          <span class="pill"><i class="ri-store-2-line"></i> Shop</span>
+        </div>
+        <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-2)">
+          <a href="contact.html" class="btn btn-primary btn-lg"><i class="ri-calendar-line"></i> Book a Tour</a>
+          <a href="services.html" class="btn btn-light btn-lg">Browse Experiences</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero2-right">
+      <img src="https://udderlyridiculousfarmlife.com/wp-content/uploads/2025/03/Udderly-Website-Assets-3.png" alt="Close up of friendly alpaca on green farm" loading="eager"/>
+    </div>
+  </section>
+
+  <!-- Dark Features -->
+  <section class="dark-features" aria-labelledby="features2-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll" style="margin-bottom:var(--space-6)">
+        <h2 id="features2-heading">Why Visitors Love Our Farm</h2>
+        <div class="wool-divider"><span style="color:var(--color-gold);font-size:1rem">🌿</span></div>
+        <p>Four reasons our guests return year after year.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="dark-feat-box animate-on-scroll animate-delay-1">
+          <div class="feat-img"><img src="https://www.welthungerhilfe.org/fileadmin/_processed_/b/2/csm_Peru_Alpacas_3074818768.jpg" alt="Sustainable Farming"/></div>
+          <i class="ri-seedling-line"></i>
+          <h4>Sustainable Farming</h4>
+          <p>Certified humane practices, free-range grazing, zero chemicals — because we care about the land and our animals.</p>
+        </div>
+        <div class="dark-feat-box animate-on-scroll animate-delay-2">
+          <div class="feat-img"><img src="https://media.istockphoto.com/id/1090188496/photo/girl-feeding-alpacas.jpg?s=170667a&w=0&k=20&c=5eRF4hmPF0r66YjFAX820rGoDUhbTYBMqmGm-bMYOrQ=" alt="Hands-On Learning"/></div>
+          <i class="ri-hand-heart-line"></i>
+          <h4>Hands-On Learning</h4>
+          <p>Every workshop gets you from raw fleece to finished yarn under expert guidance. No experience needed.</p>
+        </div>
+        <div class="dark-feat-box animate-on-scroll animate-delay-3">
+          <div class="feat-img"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/6c/b6/f8/all-alpaca.jpg?w=900&h=-1&s=1" alt="Premium Quality"/></div>
+          <i class="ri-shield-check-line"></i>
+          <h4>Premium Quality</h4>
+          <p>Our alpaca fiber is tested for micron fineness — only the softest, most luxurious fleece reaches our shop.</p>
+        </div>
+        <div class="dark-feat-box animate-on-scroll animate-delay-4">
+          <div class="feat-img"><img src="https://staybook.in/_next/image?url=https%3A%2F%2Fcdn-imgix.headout.com%2Fmedia%2Fimages%2Fcdc3fbf8-e875-4cfa-9229-0a25414bd58a-1750394546338-286005.jpg%3Fw%3D1120%26h%3D630%26crop%3Dfaces%26auto%3Dcompress%252Cformat%26fit%3Dmin&w=1920&q=75" alt="Family Friendly"/></div>
+          <i class="ri-group-line"></i>
+          <h4>Family Friendly</h4>
+          <p>From toddlers to grandparents, every age finds joy at the farm. Special kids' tours available every weekend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Experiences (with images) -->
+  <section class="section" aria-labelledby="seasons-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-label">Year Round</div>
+        <h2 id="seasons-heading">Seasonal Farm Experiences</h2>
+        <div class="wool-divider"><span class="wool-icon">🌸</span></div>
+        <p>Each season at the farm brings something new and magical.</p>
+      </div>
+      <div class="seasonal-grid animate-on-scroll">
+        <div class="season-card">
+          <img src="https://www.weingutkuntz.de/wp-content/uploads/20220605-FO7_2583-scaled.webp" alt="Spring shearing festival at alpaca farm" loading="lazy"/>
+          <div class="season-card-overlay">
+            <h3>Spring Shearing Festival</h3>
+            <p>Watch our alpacas get their annual summer cut —  event of the year.</p>
+            <a href="contact.html" class="btn btn-primary btn-sm">Book for Spring</a>
+          </div>
+        </div>
+        <div class="season-card">
+          <img src="https://www-images.lacma.org/s3fs-public/styles/card_16_9/public/2025-09/07062025NEXGENLA_MonicaOrozco_164.jpg?VersionId=gSgE1bbBVQxmyamgxFTJeTDk0cKle8ac&itok=2lzdeLBV" alt="Summer alpaca farm tours in Vermont" loading="lazy"/>
+          <div class="season-card-overlay">
+            <h3>Summer Fiber Arts Camp</h3>
+            <p>A week-long immersive camp for fiber enthusiasts of all skill levels.</p>
+            <a href="contact.html" class="btn btn-primary btn-sm">View Dates</a>
+          </div>
+        </div>
+        <div class="season-card">
+          <img src="https://i0.wp.com/newjerseyisntboring.com/wp-content/uploads/2019/09/alpacasboombust.jpg?ssl=1" alt="Autumn alpaca farm experience" loading="lazy"/>
+          <div class="season-card-overlay">
+            <h3>Autumn Harvest Weekend</h3>
+            <p>Foliage, cider, and alpacas — the perfect Vermont fall combination.</p>
+            <a href="contact.html" class="btn btn-primary btn-sm">Reserve Spot</a>
+          </div>
+        </div>
+        <div class="season-card">
+          <img src="https://playitgreen.com/wp-content/uploads/2024/10/Eco-Friendly-Rugs-The-art-of-rugmaking-dates-back-1000s-of-years-to-places-like-ancient-Persia-and-China-768x512.jpg" alt="Winter craft workshop with alpaca fiber" loading="lazy"/>
+          <div class="season-card-overlay">
+            <h3>Winter Craft Workshops</h3>
+            <p>Indoor spinning, weaving and felting workshops by the wood-burning stove.</p>
+            <a href="contact.html" class="btn btn-primary btn-sm">Join Workshop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Band -->
+  <section style="background:var(--bg-secondary);padding:var(--space-8) 0;">
+    <div class="container">
+      <div class="grid grid-4 text-center">
+        <div class="animate-on-scroll animate-delay-1"><div style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--color-primary)" data-count="48" data-suffix="">0</div><p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--text-light)">Alpacas in Herd</p></div>
+        <div class="animate-on-scroll animate-delay-2"><div style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--color-primary)" data-count="4200" data-suffix="+">0+</div><p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--text-light)">Annual Visitors</p></div>
+        <div class="animate-on-scroll animate-delay-3"><div style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--color-primary)" data-count="24" data-suffix="">0</div><p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--text-light)">Workshop Styles</p></div>
+        <div class="animate-on-scroll animate-delay-4"><div style="font-family:var(--font-heading);font-size:2.8rem;font-weight:800;color:var(--color-primary)" data-count="40" data-suffix=" ac">0 ac</div><p style="font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;color:var(--text-light)">Pasture Land</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="newsletter-section">
+    <div class="container" style="position:relative;z-index:1;text-align:center">
+      <h2 style="margin-bottom:var(--space-2)">Start Your Fiber Arts Journey</h2>
+      <p style="max-width:500px;margin:0 auto var(--space-5)">Join our seasonal newsletter for farm news, new workshops and exclusive subscriber offers.</p>
+      <form class="newsletter-form" style="justify-content:center" aria-label="Newsletter signup">
+        <label for="nl2-email" class="sr-only">Email address</label>
+        <input type="email" id="nl2-email" placeholder="Enter your email" required/>
+        <button type="submit" class="btn btn-earth">Subscribe <i class="ri-send-plane-line"></i></button>
+      </form>
+    </div>
+  </section>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-label" style="color:var(--color-gold)">★ Visitor Reviews</div>
+        <h2 id="reviews-heading">What Our Guests Say</h2>
+        <div class="wool-divider"><span class="wool-icon" style="color:rgba(255,255,255,0.4)">🦙</span></div>
+        <p>Over 4,200 visitors and counting — here's what they love about the farm.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="testimonial-card animate-on-scroll animate-delay-1">
+          <div class="quote-icon">"</div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">Best family outing we've had in Vermont! The kids absolutely fell in love with Biscuit the alpaca. The spinning workshop was so zen — I'm already planning my return visit.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80" alt="Melissa Johnson" style="width:100%;height:100%;object-fit:cover"/></div>
+            <span class="author-name">Melissa Johnson</span>
+            <span class="author-detail">Burlington, VT · Farm Tour + Workshop</span>
+          </div>
+        </article>
+        <article class="testimonial-card animate-on-scroll animate-delay-2">
+          <div class="quote-icon">"</div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">I adopted Cinnamon three years ago and receive the most wonderful fleece packages. The team's love for their animals shines through every interaction. Truly.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&q=80" alt="Thomas Park" style="width:100%;height:100%;object-fit:cover"/></div>
+            <span class="author-name">Thomas Park</span>
+            <span class="author-detail">Boston, MA · Alpaca Adoption</span>
+          </div>
+        </article>
+        <article class="testimonial-card animate-on-scroll animate-delay-3">
+          <div class="quote-icon">"</div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">The yarn quality is absolutely outstanding — softest fiber I've ever worked with. I bought six skeins and knit an entire sweater. The farm store is a fiber artist's paradise.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&q=80" alt="Rachel Flores" style="width:100%;height:100%;object-fit:cover"/></div>
+            <span class="author-name">Rachel Flores</span>
+            <span class="author-detail">Portland, ME · Farm Store</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section bg-secondary text-center" style="position:relative;overflow:hidden;" aria-labelledby="cta-heading">
+    <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1200&q=50');background-size:cover;background-position:center;opacity:0.08;"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div class="section-label" style="justify-content:center;color:var(--color-gold);margin-bottom:var(--space-2)">Book Now</div>
+      <h2 style="margin-bottom:var(--space-2)">Ready to Visit the Farm?</h2>
+      <p style="color:var(--text-secondary);max-width:500px;margin:0 auto var(--space-5)">Tours fill up fast in peak season. Reserve your spot today and start your fiber arts adventure.</p>
+      <div style="display:flex;gap:var(--space-2);justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary btn-lg"><i class="ri-calendar-line"></i> Book a Tour</a>
+        <a href="services.html" class="btn btn-secondary btn-lg">Browse Experiences</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="ri-leaf-line"></i></div>
+          <span class="brand-name">Alpaca Farm</span>
+        </div>
+        <p>A family-run alpaca farm in the heart of Vermont. Tours, workshops, fiber arts, adoption program and an online shop full of alpaca love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Experiences</h4>
+        <nav class="footer-links">
+          <a href="services.html#tours"><i class="ri-arrow-right-s-line"></i> Farm Tours</a>
+          <a href="services.html#workshops"><i class="ri-arrow-right-s-line"></i> Workshops</a>
+          <a href="services.html#adoption"><i class="ri-arrow-right-s-line"></i> Adoption</a>
+          <a href="services.html#shop"><i class="ri-arrow-right-s-line"></i> Farm Shop</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links">
+          <a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line"></i> Farm Journal</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line"></i> Visit Us</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line"></i> Coming Soon</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Visit the Farm</h4>
+        <div class="footer-links">
+          <a href="tel:+18002572221"><i class="ri-phone-line"></i> +1 (800) 257-2221</a>
+          <a href="mailto:hello@alpacafarm.com"><i class="ri-mail-line"></i> hello@alpacafarm.com</a>
+          <a href="#"><i class="ri-map-pin-line"></i> 456 Meadow Lane, Burlington VT</a>
+          <a href="#"><i class="ri-time-line"></i> Daily 9am–5pm · May–Oct</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Alpaca Farm. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="../sitemap.xml">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

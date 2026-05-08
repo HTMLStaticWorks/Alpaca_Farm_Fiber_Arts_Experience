@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon | Alpaca Farm</title>
+  <meta name="description" content="Something exciting is coming to Alpaca Farm. Join the waitlist to be the first to know."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/><link rel="stylesheet" href="../assets/css/dark-mode.css"/><link rel="stylesheet" href="../assets/css/rtl.css"/>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png"/>
+  <style>
+    html,body{height:100%}
+    .cs-page{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+    .cs-bg{position:absolute;inset:0;}
+    .cs-bg img{width:100%;height:100%;object-fit:cover;}
+    .cs-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(28,43,29,0.88) 0%,rgba(28,43,29,0.70) 100%);}
+    .cs-content{position:relative;z-index:1;text-align:center;padding:var(--space-6) var(--space-3);max-width:700px;margin:0 auto;width:100%;}
+    .progress-track{height:5px;background:rgba(255,255,255,0.15);border-radius:3px;max-width:420px;margin:var(--space-4) auto;overflow:hidden;}
+    .progress-fill{height:100%;width:68%;background:linear-gradient(90deg,var(--color-accent),var(--color-gold));border-radius:3px;animation:glow 2s ease-in-out infinite alternate;}
+    @keyframes glow{from{opacity:.75}to{opacity:1;box-shadow:0 0 14px var(--color-accent);}}
+    .cs-features{display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;margin-top:var(--space-5);}
+    .cs-feat{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.7);font-size:0.875rem;}
+    .cs-feat i{color:var(--color-gold);font-size:1.1rem;}
+    .cs-form{display:flex;gap:8px;max-width:420px;margin:var(--space-4) auto 0;}
+    .cs-form input{flex:1;padding:14px 20px;border:1.5px solid rgba(255,255,255,0.25);border-radius:var(--border-radius-pill);background:rgba(255,255,255,0.12);color:white;font-size:0.9rem;font-family:var(--font-body);}
+    .cs-form input::placeholder{color:rgba(255,255,255,0.6);}
+    .cs-form input:focus{border-color:rgba(255,255,255,0.5);outline:none;}
+    .cs-social{display:flex;gap:10px;justify-content:center;margin-top:var(--space-4);}
+  </style>
+</head>
+<body>
+
+<div class="auth-page-controls">
+  <button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button>
+  <button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button>
+</div>
+
+<main class="cs-page" role="main">
+  <!-- Real farm background -->
+  <div class="cs-bg" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1600&q=80" alt=""/>
+  </div>
+
+  <div class="cs-content">
+    <!-- Brand -->
+    <a href="../index.html" style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:var(--space-5);text-decoration:none;" aria-label="Alpaca Farm Home">
+      <div class="logo-icon" style="width:58px;height:58px;font-size:1.5rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);backdrop-filter:blur(8px)"><i class="ri-leaf-line"></i></div>
+      <div>
+        <div style="font-family:var(--font-heading);font-weight:700;color:white;font-size:1.1rem;line-height:1.1">Alpaca Farm</div>
+
+      </div>
+    </a>
+
+    <div class="section-label" style="justify-content:center;color:var(--color-gold);margin-bottom:var(--space-3);">
+      <i class="ri-rocket-2-line"></i> Something New Is Growing
+    </div>
+
+    <h1 style="color:white;margin-bottom:var(--space-2)">We're Getting<br><em style="color:var(--color-gold)">Field Ready</em></h1>
+    <p style="color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto var(--space-3);font-size:1rem">
+      Our brand-new online fiber arts studio, alpaca adoption portal, and expanded workshop booking system are almost ready. Be the first to know when we launch.
+    </p>
+
+    <!-- Progress -->
+    <div>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:6px">Build progress: 68% complete</p>
+      <div class="progress-track" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" aria-label="Development progress">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Countdown -->
+    <div id="countdown" data-target="2025-04-01T09:00:00" aria-label="Countdown to launch">
+      <div class="countdown">
+        <div class="countdown-item"><span class="num" data-unit="days">00</span><span class="unit">Days</span></div>
+        <div class="countdown-item"><span class="num" data-unit="hours">00</span><span class="unit">Hours</span></div>
+        <div class="countdown-item"><span class="num" data-unit="mins">00</span><span class="unit">Mins</span></div>
+        <div class="countdown-item"><span class="num" data-unit="secs">00</span><span class="unit">Secs</span></div>
+      </div>
+    </div>
+
+    <!-- Notify form — Mailchimp/ConvertKit ready -->
+    <form class="cs-form newsletter-form" aria-label="Launch notification signup">
+      <label for="cs-email" class="sr-only">Email address</label>
+      <input type="email" id="cs-email" placeholder="Enter your email address" required autocomplete="email"/>
+      <button type="submit" class="btn btn-primary" style="white-space:nowrap"><i class="ri-bell-line"></i> Notify Me</button>
+    </form>
+    <p style="color:rgba(255,255,255,0.4);font-size:0.75rem;margin-top:8px">No spam. One email on launch day.</p>
+
+    <!-- Upcoming features teaser -->
+    <div class="cs-features">
+      <div class="cs-feat"><i class="ri-3d-cube-sphere-line"></i> Online Fiber Studio</div>
+      <div class="cs-feat"><i class="ri-heart-3-line"></i> Adoption Portal</div>
+      <div class="cs-feat"><i class="ri-calendar-schedule-line"></i> Live Workshop Booking</div>
+      <div class="cs-feat"><i class="ri-store-2-line"></i> Expanded Shop</div>
+    </div>
+
+    <!-- Social links -->
+    <div class="cs-social">
+      <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+      <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+      <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+      <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+    </div>
+
+    <p style="margin-top:var(--space-5)">
+      <a href="../index.html" style="color:rgba(255,255,255,0.5);font-size:0.85rem;transition:color 0.3s"><i class="ri-arrow-left-line"></i> Visit our current site in the meantime</a>
+    </p>
+  </div>
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="ri-leaf-line"></i></div>
+          <span class="brand-name">Alpaca Farm</span>
+        </div>
+        <p>A family-run alpaca farm in the heart of Vermont. Tours, workshops, fiber arts, adoption program and an online shop full of alpaca love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+          <a href="#" class="social-btn" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Experiences</h4>
+        <nav class="footer-links">
+          <a href="services.html#tours"><i class="ri-arrow-right-s-line"></i> Farm Tours</a>
+          <a href="services.html#workshops"><i class="ri-arrow-right-s-line"></i> Workshops</a>
+          <a href="services.html#adoption"><i class="ri-arrow-right-s-line"></i> Adoption</a>
+          <a href="services.html#shop"><i class="ri-arrow-right-s-line"></i> Farm Shop</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <nav class="footer-links">
+          <a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a>
+          <a href="blog.html"><i class="ri-arrow-right-s-line"></i> Farm Journal</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line"></i> Visit Us</a>
+          <a href="coming-soon.html"><i class="ri-arrow-right-s-line"></i> Coming Soon</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Visit the Farm</h4>
+        <div class="footer-links">
+          <a href="tel:+18002572221"><i class="ri-phone-line"></i> +1 (800) 257-2221</a>
+          <a href="mailto:hello@alpacafarm.com"><i class="ri-mail-line"></i> hello@alpacafarm.com</a>
+          <a href="#"><i class="ri-map-pin-line"></i> 456 Meadow Lane, Burlington VT</a>
+          <a href="#"><i class="ri-time-line"></i> Daily 9am–5pm · May–Oct</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Alpaca Farm. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="../sitemap.xml">Sitemap</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body></html>

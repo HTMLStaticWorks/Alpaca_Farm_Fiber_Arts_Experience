@@ -1,0 +1,133 @@
+/* ========================================
+   ALPACA FARM — DARK MODE STYLES
+   ======================================== */
+[data-theme="dark"] {
+  --bg-primary: #141F15;
+  --bg-secondary: #1C2B1D;
+  --bg-card: #1E2E1F;
+  --bg-earth: #1A2418;
+  --text-primary: #EEE8D8;
+  --text-secondary: #B0A898;
+  --text-light: #6E6358;
+  --border-color: #2A3A2B;
+}
+
+[data-theme="dark"] #footer {
+  background: rgba(20, 31, 21, 0.96);
+  backdrop-filter: blur(14px);
+  border-top-color: #2A3A2B;
+}
+
+[data-theme="dark"] #header {
+  background: rgba(20, 31, 21, 0.96);
+  border-bottom-color: #2A3A2B;
+}
+
+[data-theme="dark"] .mobile-nav {
+  background: #1C2B1D;
+  border-color: #2A3A2B;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .offering-card,
+[data-theme="dark"] .alpaca-card,
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .auth-card {
+  background: #1E2E1F;
+  border-color: #2A3A2B;
+}
+
+[data-theme="dark"] .form-control {
+  background: #243326;
+  border-color: #2A3A2B;
+  color: #EEE8D8;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--color-primary);
+  background: #2A3A2B;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+  color: #EEE8D8;
+}
+
+[data-theme="dark"] .workshop-table {
+  background: #1E2E1F;
+}
+
+[data-theme="dark"] .workshop-table th {
+  background: #2C3E2D;
+}
+
+[data-theme="dark"] .workshop-table td {
+  border-color: #2A3A2B;
+  color: #B0A898;
+}
+
+[data-theme="dark"] .workshop-table tr:hover td {
+  background: #243326;
+}
+
+[data-theme="dark"] .about-badge-float {
+  border-color: #141F15;
+}
+
+[data-theme="dark"] .footer-logo .brand-name {
+  color: white;
+}
+
+[data-theme="dark"] .oauth-btn {
+  background: #1E2E1F;
+  border-color: #2A3A2B;
+  color: #EEE8D8;
+}
+
+[data-theme="dark"] .oauth-btn:hover {
+  border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .control-btn {
+  border-color: #2A3A2B;
+  color: #B0A898;
+}
+
+[data-theme="dark"] .hamburger {
+  border-color: #2A3A2B;
+}
+
+[data-theme="dark"] .hamburger span {
+  background: #EEE8D8;
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(90deg, #1E2E1F 25%, #243326 50%, #1E2E1F 75%);
+  background-size: 200% 100%;
+}
+
+[data-theme="dark"] .product-wishlist {
+  background: #1E2E1F;
+}
+
+[data-theme="dark"] .nav-link {
+  color: #B0A898;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .dropdown {
+  background: #1E2E1F;
+  border-color: #2A3A2B;
+}
+
+[data-theme="dark"] .auth-page {
+  background: #141F15;
+}

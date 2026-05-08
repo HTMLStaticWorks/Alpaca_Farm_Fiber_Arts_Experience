@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/register.html
+Disallow: /pages/404.html
+Disallow: /pages/coming-soon.html
+
+Sitemap: https://alpacafarmfiber.com/sitemap.xml
