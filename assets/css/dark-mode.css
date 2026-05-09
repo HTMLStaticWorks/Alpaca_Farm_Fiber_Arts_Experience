@@ -199,3 +199,32 @@
 [data-theme="dark"] .photo-grid .item img { opacity: 0.88; }
 [data-theme="dark"] .photo-overlay { background: rgba(20, 31, 21, 0.6); }
 
+/* Ensure buttons have visible text on hover in dark mode */
+[data-theme="dark"] .btn-primary:hover {
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  color: var(--bg-primary) !important;
+  background: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .filter-btn:hover,
+[data-theme="dark"] .filter-btn.active {
+  color: white !important;
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .sidebar-widget .btn {
+  color: white !important;
+}
+
+[data-theme="dark"] .sidebar-widget .btn-secondary {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .sidebar-widget .btn-secondary:hover {
+  color: var(--bg-primary) !important;
+}
+
