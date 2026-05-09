@@ -23,14 +23,40 @@
     .sidebar-post-title{font-size:0.82rem;font-weight:600;color:var(--text-primary);line-height:1.3;margin-bottom:3px;}
     .sidebar-post-date{font-size:0.72rem;color:var(--text-light);}
     .tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--space-2);}
-    .featured-post{border-radius:var(--border-radius-xl);overflow:hidden;margin-bottom:var(--space-4);background:white;border:1px solid var(--border-color);display:grid;grid-template-columns:1.3fr 1fr;}
+    .featured-post{border-radius:var(--border-radius-xl);overflow:hidden;margin-bottom:var(--space-4);background:var(--bg-card);border:1px solid var(--border-color);display:grid;grid-template-columns:1.3fr 1fr;}
     .featured-post-img{overflow:hidden;min-height:300px;}
     .featured-post-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
     .featured-post:hover .featured-post-img img{transform:scale(1.05);}
     .featured-post-body{padding:var(--space-5);display:flex;flex-direction:column;justify-content:center;}
+    .featured-post-meta{display:flex;gap:var(--space-2);align-items:center;margin-bottom:var(--space-3);font-size:0.82rem;color:var(--text-light);flex-wrap:wrap;}
+    h1, h2, h3, h4, p { overflow-wrap: break-word; word-wrap: break-word; }
     .read-more{color:var(--color-accent);font-size:0.85rem;font-weight:700;display:inline-flex;align-items:center;gap:4px;transition:var(--transition);}
     .read-more:hover{gap:8px;}
-    @media(max-width:1024px){.blog-layout{grid-template-columns:1fr;}.featured-post{grid-template-columns:1fr;}.featured-post-img{min-height:220px;}}
+    @media(max-width:1024px){
+      .blog-layout{grid-template-columns:1fr;}
+      .featured-post{grid-template-columns:1fr;}
+      .featured-post-img{min-height:220px;}
+    }
+    @media(min-width:768px) and (max-width:1024px){
+      aside{display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3); margin-top:var(--space-6); align-items:start;}
+      .sidebar-widget{margin-bottom:0; display:flex; flex-direction:column; align-items:center; text-align:center; height:100%;}
+      .sidebar-widget h4{text-align:center;}
+      .sidebar-post{text-align:left; width:100%;}
+      .tag-cloud{justify-content:center;}
+      .tablet-extra-topics{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:6px;}
+      .tablet-extra-links{display:flex;flex-direction:column;gap:10px;width:100%;}
+      .tablet-extra-links-item{display:flex;}
+      .flock-footer{margin-top:auto;width:100%;padding-top:12px;}
+    }
+    @media(max-width:767px){
+      .tablet-extra-topics,.tablet-extra-links,.tablet-extra-links-item{display:none;}
+      .grid-2{grid-template-columns: 1fr !important;}
+      .featured-post-body{padding:var(--space-3);}
+      .featured-post-meta{gap:var(--space-1); font-size:0.75rem;}
+    }
+    @media(min-width:1025px){
+      .tablet-extra-topics,.tablet-extra-links,.tablet-extra-links-item{display:none;}
+    }
   </style>
 </head>
 <body class="center-content-page">
@@ -42,7 +68,7 @@
     <a href="about.html" class="nav-link">About</a>
     <a href="services.html" class="nav-link">Experiences</a>
     <a href="blog.html" class="nav-link active">Journal</a>
-    <a href="contact.html" class="nav-link">Visit Us</a>
+    <a href="contact.html" class="nav-link">Contact</a>
   </nav>
   <div class="header-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm">Sign In</a></div>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -53,18 +79,17 @@
   <a href="about.html" class="nav-link">About</a>
   <a href="services.html" class="nav-link">Experiences</a>
   <a href="blog.html" class="nav-link active">Journal</a>
-  <a href="contact.html" class="nav-link">Visit Us</a>
+  <a href="contact.html" class="nav-link">Contact</a>
   <div class="mobile-controls"><button class="control-btn" data-rtl-toggle aria-label="RTL">RTL</button><button class="control-btn" data-theme-toggle aria-label="Theme"><i class="ri-moon-line"></i></button><a href="login.html" class="btn btn-primary btn-sm" style="width:100%; margin-top:10px;">Sign In</a></div>
 </div>
 
 <main class="page-content">
   <!-- PAGE HERO with image -->
-  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1550159930-40066082a4fc?w=1400&q=80')">
+  <section class="page-hero" style="background-image:url('https://s3.us-east-2.amazonaws.com/visitfranklin.com/wp-content/uploads/2025/01/21152216/Coleman-Valley-Alpaca-Farm-in-Franklin-Tennessee-scaled.jpg')">
     <div class="container">
       <span class="section-label" style="color:var(--color-gold);justify-content:center;margin-bottom:var(--space-2)">Stories & Tips</span>
       <h1>The Farm Journal</h1>
       <p>Seasonal updates, fiber arts guides and alpaca stories from our Vermont meadow.</p>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><i class="ri-arrow-right-s-line"></i><span>Journal</span></nav>
     </div>
   </section>
 
@@ -85,13 +110,13 @@
           <!-- Featured Post with real image -->
           <article class="featured-post animate-on-scroll">
             <div class="featured-post-img">
-              <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=700&q=80" alt="Spring shearing season at the alpaca farm" loading="lazy"/>
+              <img src="https://www.smallfarms.net/wp-content/uploads/2018/02/iStock-174474201-this-one-1200x640.jpg" alt="Spring shearing season at the alpaca farm" loading="lazy"/>
             </div>
             <div class="featured-post-body">
               <span class="tag" style="margin-bottom:var(--space-1)">Farm Life</span>
-              <h2 style="font-size:1.6rem;margin-bottom:var(--space-2)">Shearing Season: Our Most Magical Time of Year</h2>
-              <p style="margin-bottom:var(--space-3)">Every spring, when the Vermont hills turn green, our farm transforms for shearing season. Here's what happens from the moment the shearers arrive to the last fleece being skirted and bagged.</p>
-              <div style="display:flex;gap:var(--space-2);align-items:center;margin-bottom:var(--space-3);font-size:0.82rem;color:var(--text-light);">
+              <h2 style="font-size:1.6rem;margin-bottom:var(--space-2);color:var(--text-primary);">Shearing Season: Our Most Magical Time of Year</h2>
+              <p style="margin-bottom:var(--space-3);color:var(--text-secondary);">Every spring, when the Vermont hills turn green, our farm transforms for shearing season. Here's what happens from the moment the shearers arrive to the last fleece being skirted and bagged.</p>
+              <div class="featured-post-meta">
                 <span><i class="ri-user-line"></i> Margaret Henderson</span>
                 <span><i class="ri-calendar-line"></i> Nov 18, 2024</span>
                 <span><i class="ri-time-line"></i> 10 min read</span>
@@ -103,12 +128,12 @@
           <!-- Post Grid with images -->
           <div class="grid grid-2" style="margin-bottom:var(--space-4)">
             <article class="blog-card animate-on-scroll animate-delay-1">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1607349913338-fca6f7fc42d0?w=600&q=75" alt="Colorful hand-dyed alpaca yarn" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://thebridge.greenschool.org/wp-content/uploads/2021/01/NaturalDyeBali1.jpg" alt="Colorful hand-dyed alpaca yarn" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-accent);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Fiber Arts</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Nov 10, 2024</span><span><i class="ri-time-line"></i> 7 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">Natural Dyeing with Plants from the Farm Garden</h3>
@@ -117,12 +142,12 @@
               </div>
             </article>
             <article class="blog-card animate-on-scroll animate-delay-2">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="Baby alpaca cria in spring" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://cottoncreekfarms.com/wp-content/uploads/2022/07/Hunter-Helping-With-Sherry-Anns-Birth.jpg" alt="Baby alpaca cria in spring" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-primary);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Alpaca Care</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Nov 2, 2024</span><span><i class="ri-time-line"></i> 8 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">Welcoming Crias: Our Guide to Alpaca Birth Season</h3>
@@ -131,12 +156,12 @@
               </div>
             </article>
             <article class="blog-card animate-on-scroll animate-delay-1">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1550159930-40066082a4fc?w=600&q=75" alt="Spinning wheel and alpaca fleece" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://media.istockphoto.com/id/1690815534/photo/the-spinning-process-involves-twisting-the-fibers-of-the-wool-together-to-create-a-strong-and.jpg?s=612x612&w=0&k=20&c=3BJMxOGFimhZnw_bQRIDH_Zd2UOd_zuuHz7HgbmO5kk=" alt="Spinning wheel and alpaca fleece" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-accent);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Fiber Arts</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Oct 25, 2024</span><span><i class="ri-time-line"></i> 6 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">5 Things Every Beginner Spinner Should Know</h3>
@@ -145,12 +170,12 @@
               </div>
             </article>
             <article class="blog-card animate-on-scroll animate-delay-2">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=600&q=75" alt="Alpaca in autumn Vermont landscape" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://img1.wsimg.com/isteam/ip/2904b1eb-0ebc-4181-8c53-16a2bed13605/423557457_775903961235881_6844085523386383009_.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280" alt="Alpaca in autumn Vermont landscape" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-earth);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Seasonal</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Oct 14, 2024</span><span><i class="ri-time-line"></i> 5 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">Preparing the Herd for a Vermont Winter</h3>
@@ -159,12 +184,12 @@
               </div>
             </article>
             <article class="blog-card animate-on-scroll animate-delay-1">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=75" alt="Alpaca fiber gift wrapping DIY" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://cottoncreekfarms.com/wp-content/uploads/2025/02/Alpaca-Shearing-Example.png" alt="Alpaca fiber gift wrapping DIY" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-gold);color:var(--color-primary);font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Recipes & DIY</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Oct 5, 2024</span><span><i class="ri-time-line"></i> 4 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">DIY Alpaca Gift Wrapping That Anyone Can Make</h3>
@@ -173,12 +198,12 @@
               </div>
             </article>
             <article class="blog-card animate-on-scroll animate-delay-2">
-              <div class="blog-img" style="height:0;padding-bottom:56%;position:relative;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=75" alt="Children on alpaca tour field trip" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+              <div class="blog-img">
+                <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_75,w_1200/v1/crm/cumberland/Starry-Night-Alpacas-10_ea20448c-5056-a36a-0ba11d413f550579.jpg" alt="Children on alpaca tour field trip" loading="lazy"/>
                 <span class="blog-category" style="position:absolute;top:12px;left:12px;background:var(--color-primary);color:white;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:var(--border-radius-pill);">Farm Life</span>
               </div>
               <div class="blog-body" style="padding:var(--space-3);">
-                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light)">
+                <div style="display:flex;gap:var(--space-2);margin-bottom:8px;font-size:0.78rem;color:var(--text-light);justify-content:center">
                   <span><i class="ri-calendar-line"></i> Sep 28, 2024</span><span><i class="ri-time-line"></i> 6 min</span>
                 </div>
                 <h3 style="font-size:1.1rem;margin-bottom:8px">Why School Farm Visits Are Our Favourite Days</h3>
@@ -189,22 +214,17 @@
           </div>
           <!-- Pagination -->
           <div style="display:flex;justify-content:center;gap:8px;margin-top:var(--space-4)">
-            <button class="btn btn-primary btn-sm">1</button>
+            <button class="filter-btn">Back <i class=""></i></button>
+            <button class="filter-btn">1</button>
             <button class="filter-btn">2</button>
             <button class="filter-btn">3</button>
-            <button class="filter-btn">Next <i class="ri-arrow-right-s-line"></i></button>
+            <button class="filter-btn">Next <i class=""></i></button>
           </div>
         </div>
 
         <!-- Sidebar -->
         <aside>
-          <div class="sidebar-widget">
-            <h4>Search</h4>
-            <div style="display:flex;gap:8px;margin-top:var(--space-2)">
-              <input type="search" placeholder="Search posts..." class="form-control" style="flex:1" aria-label="Search blog"/>
-              <button class="btn btn-primary btn-sm" aria-label="Search"><i class="ri-search-line"></i></button>
-            </div>
-          </div>
+          
 
           <div class="sidebar-widget">
             <h4>Recent Posts</h4>
@@ -231,21 +251,51 @@
             <div class="tag-cloud">
               <span class="tag">Farm Life</span><span class="tag">Fiber Arts</span><span class="tag">Spinning</span><span class="tag">Weaving</span><span class="tag">Alpaca Care</span><span class="tag">DIY</span><span class="tag">Seasonal</span><span class="tag">Shearing</span><span class="tag">Adoption</span>
             </div>
+            <div class="tablet-extra-topics">
+              <span class="tag">Felting</span><span class="tag">Natural Dyes</span><span class="tag">Cria Season</span><span class="tag">Nutrition</span><span class="tag">Sustainability</span><span class="tag">Vermont</span><span class="tag">Herd Health</span><span class="tag">Fleece</span><span class="tag">Recipes</span><span class="tag">Events</span>
+            </div>
           </div>
 
-          <div class="sidebar-widget" style="background:linear-gradient(135deg,var(--color-primary),#4a7451);border:none">
-            <h4 style="color:white">Join the Flock 🦙</h4>
-            <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin:8px 0 16px">Get seasonal farm stories and new product alerts delivered to your inbox.</p>
-            <input type="email" placeholder="Your email" class="form-control" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);color:white;margin-bottom:8px" aria-label="Newsletter email"/>
-            <button class="btn btn-light btn-full btn-sm">Subscribe</button>
+          <div class="sidebar-widget">
+            <h4>Meet the Herd 🦙</h4>
+            <div style="text-align:center;">
+              <img src="https://cdn11.bigcommerce.com/s-48655/product_images/uploaded_images/istock-000042041464-large.jpg" alt="Biscuit the alpaca" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin:var(--space-2) auto;border:3px solid var(--color-secondary);"/>
+              <h5 style="font-family:var(--font-heading);font-size:1.2rem;margin-bottom:4px">Biscuit</h5>
+              <p style="font-size:0.85rem;color:var(--text-secondary)">Our friendliest Huacaya who loves treats and posing for photos!</p>
+              <a href="services.html#adoption" class="btn btn-secondary btn-sm btn-full" style="margin-top:12px">Adopt Biscuit</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4>Quick Links</h4>
+            <div style="display:flex;justify-content:center;margin-top:12px;">
+              <ul style="list-style:none;padding:0;display:inline-flex;flex-direction:column;gap:10px;">
+                <li><a href="services.html#tours" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-calendar-event-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Guided Farm Tours</a></li>
+                <li><a href="services.html#workshops" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-palette-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Fiber Arts Workshops</a></li>
+                <li><a href="services.html#shop" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-shopping-bag-3-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> New Arrivals in Shop</a></li>
+                <li class="tablet-extra-links-item"><a href="services.html#adoption" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-heart-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Adopt an Alpaca</a></li>
+                <li class="tablet-extra-links-item"><a href="about.html" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-team-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Meet the Family</a></li>
+                <li class="tablet-extra-links-item"><a href="contact.html" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-map-pin-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Get Directions</a></li>
+                <li class="tablet-extra-links-item"><a href="contact.html" style="font-size:0.9rem;display:flex;align-items:center;gap:10px;color:var(--text-primary);"><i class="ri-phone-line" style="color:var(--color-accent);width:16px;flex-shrink:0;"></i> Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sidebar-widget" style="background:var(--bg-secondary);border:1px solid var(--border-color)">
+            <h4 style="color:var(--text-primary)">Join the Flock 🦙</h4>
+            <p style="color:var(--text-secondary);font-size:0.85rem;margin:8px 0 0">Get seasonal farm stories and new product alerts delivered to your inbox.</p>
+            <div class="flock-footer" style="width:100%;margin-top:auto;padding-top:12px;">
+              <input type="email" placeholder="Your email" class="form-control" style="background:var(--bg-card);border-color:var(--border-color);color:var(--text-primary);margin-bottom:8px;width:100%;" aria-label="Newsletter email"/>
+              <button class="btn btn-primary btn-full btn-sm">Subscribe</button>
+            </div>
           </div>
 
           <!-- Farm image widget -->
-          <div style="border-radius:var(--border-radius-lg);overflow:hidden;margin-top:var(--space-3)">
-            <img src="https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=400&q=75" alt="Alpaca on Vermont farm" loading="lazy" style="width:100%;height:200px;object-fit:cover"/>
-            <div style="background:var(--color-accent);padding:var(--space-3);text-align:center">
-              <p style="color:white;font-weight:700;font-size:0.9rem;margin-bottom:8px">Book a Farm Tour</p>
-              <a href="contact.html" class="btn btn-light btn-sm btn-full">Reserve Your Spot</a>
+          <div class="sidebar-widget" style="padding:0;overflow:hidden;">
+            <img src="https://throughlocals.com/wp-content/uploads/2024/09/urban.jpg" alt="Alpaca on Vermont farm" loading="lazy" style="width:100%;height:160px;object-fit:cover;display:block;"/>
+            <div style="padding:var(--space-3);text-align:center;background:var(--bg-secondary);">
+              <p style="font-weight:700;font-size:0.9rem;margin-bottom:8px;color:var(--text-primary);">Book a Farm Tour</p>
+              <a href="contact.html" class="btn btn-primary btn-sm btn-full">Reserve Your Spot</a>
             </div>
           </div>
         </aside>
@@ -284,7 +334,7 @@
         <nav class="footer-links">
           <a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a>
           <a href="blog.html"><i class="ri-arrow-right-s-line"></i> Farm Journal</a>
-          <a href="contact.html"><i class="ri-arrow-right-s-line"></i> Visit Us</a>
+          <a href="contact.html"><i class="ri-arrow-right-s-line"></i> Contact</a>
           <a href="coming-soon.html"><i class="ri-arrow-right-s-line"></i> Coming Soon</a>
         </nav>
       </div>
@@ -293,13 +343,13 @@
         <div class="footer-links">
           <a href="tel:+18002572221"><i class="ri-phone-line"></i> +1 (800) 257-2221</a>
           <a href="mailto:hello@alpacafarm.com"><i class="ri-mail-line"></i> hello@alpacafarm.com</a>
-          <a href="#"><i class="ri-map-pin-line"></i> 456 Meadow Lane, Burlington VT</a>
+          <a href="#"><i class="ri-map-pin-line"></i> 456 Meadow Lane, Burlington</a>
           <a href="#"><i class="ri-time-line"></i> Daily 9am–5pm · May–Oct</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Alpaca Farm. All rights reserved.</p>
+      <p>&copy; 2026 Alpaca Farm. All rights reserved.</p>
       <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="../sitemap.xml">Sitemap</a></p>
     </div>
   </div>

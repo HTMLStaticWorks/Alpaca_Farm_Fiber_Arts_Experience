@@ -131,3 +131,71 @@
 [data-theme="dark"] .auth-page {
   background: #141F15;
 }
+
+[data-theme="dark"] .product-price {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .price-symbol {
+  color: var(--color-gold);
+}
+
+[data-theme="dark"] .pricing-price,
+[data-theme="dark"] .adoption-price {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .btn-secondary {
+  color: var(--text-primary);
+  border-color: rgba(238, 232, 216, 0.4);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+[data-theme="dark"] .btn-secondary[disabled] {
+  opacity: 1 !important;
+  border-color: rgba(238, 232, 216, 0.2) !important;
+  color: var(--text-secondary) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .sidebar-widget {
+  background: #1E2E1F;
+  border-color: #2A3A2B;
+}
+
+[data-theme="dark"] .sidebar-widget h4 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .sidebar-post-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .sidebar-post-date {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .sidebar-post {
+  border-bottom-color: #2A3A2B;
+}
+
+[data-theme="dark"] .tag {
+  background: rgba(58, 90, 64, 0.3);
+  color: var(--color-soft);
+}
+
+[data-theme="dark"] .sidebar-widget a {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .sidebar-widget a:hover {
+  color: var(--color-accent);
+}
+[data-theme="dark"] .photo-grid .item { background: #1E2E1F; }
+[data-theme="dark"] .photo-grid .item img { opacity: 0.88; }
+[data-theme="dark"] .photo-overlay { background: rgba(20, 31, 21, 0.6); }
+
