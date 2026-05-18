@@ -484,7 +484,9 @@ p {
 }
 
 .control-btn {
-  width: 40px;
+  min-width: 40px;
+  width: auto;
+  padding: 0 10px;
   height: 40px;
   border-radius: 10px;
   background: transparent;
@@ -564,6 +566,7 @@ p {
   padding: 13px 16px;
   border-bottom: 1px solid var(--border-color);
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .mobile-nav .nav-link:last-of-type {
@@ -572,10 +575,19 @@ p {
 
 .mobile-controls {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   padding: 16px;
   border-top: 1px solid var(--border-color);
   margin-top: 8px;
+}
+
+.mobile-controls-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
 }
 
 /* ========================================
@@ -2360,6 +2372,8 @@ textarea.form-control {
   overflow: hidden;
   transition: var(--transition);
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card:hover {
@@ -2389,6 +2403,13 @@ textarea.form-control {
 
 .blog-body {
   padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-body .read-more {
+  margin-top: auto;
 }
 
 /* ========================================

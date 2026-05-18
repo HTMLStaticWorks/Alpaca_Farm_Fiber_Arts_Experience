@@ -2,30 +2,30 @@
    ALPACA FARM — DARK MODE STYLES
    ======================================== */
 [data-theme="dark"] {
-  --bg-primary: #141F15;
-  --bg-secondary: #1C2B1D;
-  --bg-card: #1E2E1F;
-  --bg-earth: #1A2418;
-  --text-primary: #EEE8D8;
-  --text-secondary: #B0A898;
-  --text-light: #6E6358;
-  --border-color: #2A3A2B;
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --bg-card: #1C1C1E;
+  --bg-earth: #161618;
+  --text-primary: #F2F2F7;
+  --text-secondary: #AEAEB2;
+  --text-light: #8E8E93;
+  --border-color: #2C2C2E;
 }
 
 [data-theme="dark"] #footer {
-  background: rgba(20, 31, 21, 0.96);
+  background: rgba(0, 0, 0, 0.96);
   backdrop-filter: blur(14px);
-  border-top-color: #2A3A2B;
+  border-top-color: var(--border-color);
 }
 
 [data-theme="dark"] #header {
-  background: rgba(20, 31, 21, 0.96);
-  border-bottom-color: #2A3A2B;
+  background: rgba(0, 0, 0, 0.96);
+  border-bottom-color: var(--border-color);
 }
 
 [data-theme="dark"] .mobile-nav {
-  background: #1C2B1D;
-  border-color: #2A3A2B;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 [data-theme="dark"] .card,
@@ -35,47 +35,47 @@
 [data-theme="dark"] .pricing-card,
 [data-theme="dark"] .timeline-content,
 [data-theme="dark"] .auth-card {
-  background: #1E2E1F;
-  border-color: #2A3A2B;
+  background: var(--bg-card);
+  border-color: var(--border-color);
 }
 
 [data-theme="dark"] .form-control {
-  background: #243326;
-  border-color: #2A3A2B;
-  color: #EEE8D8;
+  background: #242426;
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 [data-theme="dark"] .form-control:focus {
   border-color: var(--color-primary);
-  background: #2A3A2B;
+  background: #2C2C2E;
 }
 
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
 [data-theme="dark"] h3,
 [data-theme="dark"] h4 {
-  color: #EEE8D8;
+  color: var(--text-primary);
 }
 
 [data-theme="dark"] .workshop-table {
-  background: #1E2E1F;
+  background: var(--bg-card);
 }
 
 [data-theme="dark"] .workshop-table th {
-  background: #2C3E2D;
+  background: #2C2C2E;
 }
 
 [data-theme="dark"] .workshop-table td {
-  border-color: #2A3A2B;
-  color: #B0A898;
+  border-color: var(--border-color);
+  color: var(--text-secondary);
 }
 
 [data-theme="dark"] .workshop-table tr:hover td {
-  background: #243326;
+  background: #242426;
 }
 
 [data-theme="dark"] .about-badge-float {
-  border-color: #141F15;
+  border-color: var(--bg-primary);
 }
 
 [data-theme="dark"] .footer-logo .brand-name {
@@ -83,9 +83,9 @@
 }
 
 [data-theme="dark"] .oauth-btn {
-  background: #1E2E1F;
-  border-color: #2A3A2B;
-  color: #EEE8D8;
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 [data-theme="dark"] .oauth-btn:hover {
@@ -93,29 +93,29 @@
 }
 
 [data-theme="dark"] .control-btn {
-  border-color: #2A3A2B;
-  color: #B0A898;
+  border-color: var(--border-color);
+  color: var(--text-secondary);
 }
 
 [data-theme="dark"] .hamburger {
-  border-color: #2A3A2B;
+  border-color: var(--border-color);
 }
 
 [data-theme="dark"] .hamburger span {
-  background: #EEE8D8;
+  background: var(--text-primary);
 }
 
 [data-theme="dark"] .skeleton {
-  background: linear-gradient(90deg, #1E2E1F 25%, #243326 50%, #1E2E1F 75%);
+  background: linear-gradient(90deg, var(--bg-card) 25%, #242426 50%, var(--bg-card) 75%);
   background-size: 200% 100%;
 }
 
 [data-theme="dark"] .product-wishlist {
-  background: #1E2E1F;
+  background: var(--bg-card);
 }
 
 [data-theme="dark"] .nav-link {
-  color: #B0A898;
+  color: var(--text-secondary);
 }
 
 [data-theme="dark"] .nav-link:hover,
@@ -124,12 +124,12 @@
 }
 
 [data-theme="dark"] .dropdown {
-  background: #1E2E1F;
-  border-color: #2A3A2B;
+  background: var(--bg-card);
+  border-color: var(--border-color);
 }
 
 [data-theme="dark"] .auth-page {
-  background: #141F15;
+  background: var(--bg-primary);
 }
 
 [data-theme="dark"] .product-price {
@@ -163,8 +163,8 @@
 }
 
 [data-theme="dark"] .sidebar-widget {
-  background: #1E2E1F;
-  border-color: #2A3A2B;
+  background: var(--bg-card);
+  border-color: var(--border-color);
 }
 
 [data-theme="dark"] .sidebar-widget h4 {
@@ -180,12 +180,12 @@
 }
 
 [data-theme="dark"] .sidebar-post {
-  border-bottom-color: #2A3A2B;
+  border-bottom-color: var(--border-color);
 }
 
 [data-theme="dark"] .tag {
-  background: rgba(58, 90, 64, 0.3);
-  color: var(--color-soft);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
 }
 
 [data-theme="dark"] .sidebar-widget a {
@@ -195,9 +195,9 @@
 [data-theme="dark"] .sidebar-widget a:hover {
   color: var(--color-accent);
 }
-[data-theme="dark"] .photo-grid .item { background: #1E2E1F; }
+[data-theme="dark"] .photo-grid .item { background: var(--bg-card); }
 [data-theme="dark"] .photo-grid .item img { opacity: 0.88; }
-[data-theme="dark"] .photo-overlay { background: rgba(20, 31, 21, 0.6); }
+[data-theme="dark"] .photo-overlay { background: rgba(0, 0, 0, 0.6); }
 
 /* Ensure buttons have visible text on hover in dark mode */
 [data-theme="dark"] .btn-primary:hover {
@@ -227,4 +227,10 @@
 [data-theme="dark"] .sidebar-widget .btn-secondary:hover {
   color: var(--bg-primary) !important;
 }
+
+[data-theme="dark"] .discount-offers-box {
+  background: linear-gradient(135deg, #2C2C2E, #1C1C1E) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
 
